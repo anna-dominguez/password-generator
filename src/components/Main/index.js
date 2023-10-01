@@ -122,14 +122,14 @@ export default function Main() {
             </div>
           ))}
         </div>
-        <div className="flex justify-between bg-veryDarkGrey p-5 mt-8">
+        <div className="flex justify-between bg-veryDarkGrey p-5 sm:px-8 mt-8">
           <p className="text-grey text-base sm:text-lg">STRENGTH</p>
           <div className="flex">
             <p className="text-almostWhite mr-4 text-lg sm:text-2xl">
               {password && strengthMessage()}
             </p>
             <div className="flex gap-2">
-              {[1, 2, 3, 4].map((nb, index) => (
+              {[1, 2, 3, 4].map((nb) => (
                 <div
                   key={nb}
                   className={`border-2 border-almostWhite w-[10px] h-7 ${
@@ -145,7 +145,7 @@ export default function Main() {
         <button
           onClick={() => generatePassword()}
           className="group flex bg-neonGreen hover:bg-darkGrey border border-neonGreen
-         hover:text-neonGreen mt-4 p-5 justify-center items-center text-base sm:text-lg"
+         hover:text-neonGreen mt-4 sm:mt-8 p-5 justify-center items-center text-base sm:text-lg"
         >
           GENERATE
           <IconArrow props="group-hover:fill-neonGreen ml-4" />
