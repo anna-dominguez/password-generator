@@ -1,13 +1,31 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* input[type='range']::-webkit-slider-thumb {
+  width: 28px;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 28px;
+  background: #fff;
+  box-shadow: -405px 0 0 400px #a4ffaf;
+  border-radius: 100%;
+} */
+
+@layer {
+  html {
+    @apply grid place-content-center h-screen w-screen bg-gradient-to-b from-[#14131B] to-[#08070B];
+  }
+  body {
+    @apply w-screen;
+  }
+  section {
+    @apply bg-darkGrey;
+  }
+  input[type='range']::-webkit-slider-thumb {
+    @apply appearance-none w-7 h-7 bg-almostWhite hover:border-solid hover:border-neonGreen hover:bg-veryDarkGrey rounded-full;
+  }
+  .checkbox {
+    @apply mr-6 h-5 w-5 bg-darkGrey border border-white hover:border-neonGreen checked:text-darkGrey checked:bg-neonGreen;
+  }
 }
