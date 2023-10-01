@@ -4,7 +4,9 @@ export default function PasswordLength({ nbCharacters, setNbCharacters }) {
   return (
     <div className="w-full">
       <div className="flex items-center justify-between mb-[16px]">
-        <p className="text-almostWhite text-base">Character Length</p>
+        <p className="text-almostWhite text-base sm:text-lg">
+          Character Length
+        </p>
         <p className="text-neonGreen text-2xl">{nbCharacters}</p>
       </div>
       <input

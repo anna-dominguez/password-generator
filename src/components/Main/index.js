@@ -78,10 +78,10 @@ export default function Main() {
   }
 
   return (
-    <main className="grid mx-auto gap-4 md:gap-6 w-[95%] sm:w-[85%] md:w-[75%] lg:w-[50%]">
-      <section className="flex justify-between p-4">
+    <main className="grid mx-auto gap-4 md:gap-6 w-[95%] sm:w-[85%] md:w-[75%] lg:w-[40%]">
+      <section className="flex justify-between p-4 sm:py-8 sm:px-5">
         <p
-          className={`${
+          className={`text-2xl sm:text-[32px] ${
             password == null
               ? 'text-almostWhite opacity-25'
               : 'text-almostWhite'
@@ -94,7 +94,7 @@ export default function Main() {
           props="fill-neonGreen hover:fill-white cursor-pointer"
         />
       </section>
-      <section className="flex flex-col p-4">
+      <section className="flex flex-col p-4 sm:py-8 sm:px-6">
         <PasswordLength
           nbCharacters={nbCharacters}
           setNbCharacters={setNbCharacters}
@@ -118,14 +118,14 @@ export default function Main() {
                   } absolute left-1 top-2 cursor-pointer`}
                 />
               </div>
-              <label>{label}</label>
+              <label className="text-base sm:text-lg">{label}</label>
             </div>
           ))}
         </div>
         <div className="flex justify-between bg-veryDarkGrey p-5 mt-8">
-          <p className="text-grey">STRENGTH</p>
+          <p className="text-grey text-base sm:text-lg">STRENGTH</p>
           <div className="flex">
-            <p className="text-almostWhite mr-4">
+            <p className="text-almostWhite mr-4 text-lg sm:text-2xl">
               {password && strengthMessage()}
             </p>
             <div className="flex gap-2">
@@ -145,7 +145,7 @@ export default function Main() {
         <button
           onClick={() => generatePassword()}
           className="group flex bg-neonGreen hover:bg-darkGrey border border-neonGreen
-         hover:text-neonGreen mt-4 p-5 justify-center items-center"
+         hover:text-neonGreen mt-4 p-5 justify-center items-center text-base sm:text-lg"
         >
           GENERATE
           <IconArrow props="group-hover:fill-neonGreen ml-4" />
